@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Step Controller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Grid Step Controller</h1>
+    <div>
+      <!-- Display step number -->
+      <div>
+        <strong>Current Step:</strong> <span id="step-display">0</span>
+      </div>
+      <!-- Input box to set the step -->
+      <label for="step-input">Set Step:</label>
+      <input type="number" id="step-input" min="0" max="100">
+      <button onclick="setStep()">Set Step</button>
+    </div>
+    <br>
+    <div>
+      <div id="slider-container">
+        <label for="step-slider">Adjust Step (0 - 15000):</label>
+        <input type="range" id="step-slider" min="0" max="15000" value="0" oninput="updateSlider()">
+      </div>
+    </div>
+    <br>
+    <!-- Button to increment step -->
+    <div>
+      <button onclick="incrementStep()" id="increment">Increment Step</button>
+    </div>
+  </header>
+  <main>
+    <!-- Grid container -->
+    <div class="grid-container" id="grid-container"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

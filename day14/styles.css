@@ -1,0 +1,74 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+/* Header Section */
+header {
+  padding: 10px;
+}
+
+#slider-container {
+  width: 90%; /* Adjust percentage as needed */
+  margin: 0 auto; /* Center the slider container */
+}
+
+#step-slider {
+  width: 100%; /* Make the slider fill its container */
+  appearance: none; /* Remove default styles for customization (optional) */
+  height: 10px; /* Adjust slider height */
+  background: #ddd; /* Background color of the slider */
+  border-radius: 5px; /* Rounded edges for the slider track */
+  outline: none; /* Remove focus outline */
+  transition: background 0.3s ease;
+}
+
+#step-slider::-webkit-slider-thumb {
+  appearance: none; /* Customize the thumb */
+  width: 20px;
+  height: 20px;
+  background: #4CAF50; /* Thumb color */
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#step-slider::-webkit-slider-thumb:hover {
+  background: #45a049; /* Hover color for the thumb */
+}
+
+#step-slider:active::-webkit-slider-thumb {
+  background: #3e8e41; /* Active color for the thumb */
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(101, 5px);
+  grid-template-rows: repeat(103, 5px);
+  gap: 1px;
+  width: fit-content;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+
+/* Each square */
+.grid-container .grid-item {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+}
+
+/* Add grid cell behavior when "updated" */
+.grid-container .grid-item.green {
+  background-color: green;
+}
