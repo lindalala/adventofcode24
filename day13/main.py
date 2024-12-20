@@ -1,5 +1,3 @@
-from math import gcd
-
 KEYS = {'A':'Button A', 'B': 'Button B', 'P':'Prize'}
 CONVERSION_ERROR = 10000000000000
 

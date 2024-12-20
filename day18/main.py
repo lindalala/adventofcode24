@@ -31,8 +31,7 @@ def getShortestPath(grid,start,end):
     seen.add(cur)
     if cur == end: return score
     nexts = [n for n in getNexts(cur) if n not in seen and isInBounds(grid,n)]
-    for next in nexts:
-      heapq.heappush(pq, (score+1,next))
+    for next in nexts: heapq.heappush(pq, (score+1,next))
   return None
 
 def getPart2(size,start,end):
@@ -44,10 +43,8 @@ def getPart2(size,start,end):
     if isMidPossible and getShortestPath(getGrid(size=size,bytes=mid+1),start,end) is None:
       row = mid
       break
-    elif isMidPossible:
-      low = mid
-    else:  
-      high = mid
+    elif isMidPossible: low = mid
+    else: high = mid
 
   with open('day18/input.txt', 'r') as file:
     count = 0
